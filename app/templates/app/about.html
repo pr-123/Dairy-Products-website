@@ -1,0 +1,49 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-content %}
+<h1>About Us</h1>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    section {
+        padding: 20px;
+        margin: 0 10%;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #666;
+        line-height: 1.6;
+    }
+</style>
+</head>
+<body>
+
+<header>
+<h1>About Us</h1>
+</header>
+
+<section>
+<h2>Welcome to [Gaumukh dairy]</h2>
+<p>At [Gaumukh dairy], we are committed to providing high-quality products and services that meet the needs of our customers. Founded in [Year], our goal has always been to create value through innovation, reliability, and customer satisfaction.</p>
+<p>We specialize in [briefly describe your business, e.g., providing tech solutions, selling handmade products, etc.]. With a team of dedicated professionals, we ensure every product/service meets the highest standards.</p>
+<p>We believe in [core values like quality, trust, customer service, etc.], and we strive to build lasting relationships with our clients by delivering exceptional service.</p>
+<p>Thank you for choosing [Gaumukh dairy]. We look forward to serving you!</p>
+</section>
+{% endblock main-content %}

@@ -1,0 +1,127 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+
+{% block banner-slider %}
+    
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b1.jpg' %}  " class="d-block w-100" alt="...">
+        </div>
+          <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+          <div class="carousel-item">
+            <img src="{% static  'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+
+{% endblock banner-slider %}
+{% block information %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">
+            Farm fresh homogenised cow milk is sourced directly
+             from the farm and undergoes a homogenization process in which the
+             fat globules are broken down to distribute them evenly throughout the milk.
+              It contains essential nutrients like calcium, protein, vitamins (such as vitamin D and B12), and minerals. 
+            These nutrients are important for maintaining bone health, supporting muscle growth and repair, and overall well-being.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
+
+
+{% block main-content %}
+<div class="container">
+    <h1 class="text-center">Welcome To Dairy Products Site..........</h1>
+    <br><br>
+    <!-- Fixed the typo from =row to row -->
+    <div class="row">
+        <!-- First Product - Buffalo Ghee -->
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="Buffalow-Ghee">
+                <a href="{% url 'categoryy' 'ML' %}">
+                   <div class="butter-milk-content text-center">
+                      <img src="{% static 'app/images/product/cow-milk.png' %}" alt="Milk" class="img-fluid">
+                      <p class="milkproduct">Milk</p>
+                   </div>
+               </a>
+            </div>
+        </div>
+
+        <!-- Second Product - Cow Ghee -->
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="Cow-Ghee">
+                <a href="{% url 'categoryy' 'GH' %}">
+                   <div class="butter-milk-content text-center">
+                      <img src="{% static 'app/images/product/cow-ghee.png' %}" alt="Cow Ghee" class="img-fluid">
+                      <p class="milkproduct">Cow Ghee</p>
+                   </div>
+               </a>
+            </div>
+        </div>
+
+        <!-- Third Product - Curd -->
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="Curd">
+                <a href="{% url 'categoryy' 'CR' %}">
+                   <div class="butter-milk-content text-center">
+                      <img src="{% static 'app/images/product/curd-premium.png' %}" alt="Curd" class="img-fluid">
+                      <p class="milkproduct">Curd</p>
+                   </div>
+               </a>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>    
+
+    <div class="row">
+        <!-- First Product - Buffalo Ghee -->
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="Buffalow-Ghee">
+               <a href="{% url 'categoryy' 'IC' %}">
+                   <div class="butter-milk-content text-center">
+                      <img src="{% static 'app/images/product/icbars.png' %}" alt="Ice-cream" class="img-fluid">
+                      <p class="milkproduct">Ice-Cream</p>
+                   </div>
+               </a>
+            </div>
+        </div>
+
+        <!-- Second Product - Cow Ghee -->
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="Cow-Ghee">
+                <a href="{% url 'categoryy' 'PN' %}">
+                   <div class="butter-milk-content text-center">
+                      <img src="{% static 'app/images/product/paneer-lite.png' %}" alt="paneer-lite" class="img-fluid">
+                      <p class="milkproduct">Paneer</p>
+                   </div>
+               </a>
+            </div>
+        </div>
+
+        <!-- Third Product - Curd -->
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="Curd">
+                <a href="{% url 'categoryy' 'MS' %}">
+                   <div class="butter-milk-content text-center">
+                      <img src="{% static 'app/images/product/milk-shake-strawberry.png' %}" alt="MilkShake" class="img-fluid">
+                      <p class="milkproduct">Milk Shake</p>
+                   </div>
+               </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+  <br/><br/>
+{% endblock main-content %}

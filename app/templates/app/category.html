@@ -1,0 +1,42 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-content %}
+{% comment %} <h1>Category:{{product}}</h1>
+     {% for prod in product %}
+       <img src="{{ prod.product_image.url }}" alt="Product Image">
+     {% endfor %} {% endcomment %}
+
+     <div class="container my-5">
+      <div class="row">
+        <div class="col-sm-3"> 
+               {% for val in title  %}
+                  <a href="{% url 'category-title' val.title %}" class="list-group-item list-group-action" aria-current="true">{{val.title}}</a>
+               {% endfor %}
+        </div>
+
+        <div class="col-sm-9"></div>
+               {% for prod in product  %}
+                  <div class="col text-center mb-4">
+
+                    {% comment %} to show the detail of the product  {% endcomment %}
+                     {% comment %} Product iamge is Working as an URL as URL of image is provided{% endcomment %}
+                    <a href="{% url 'product-detail' prod.id %}" class="btn">
+                       {% comment %} Product id is auto-genrated while adding the product {% endcomment %}
+                      <div> 
+                            <img src="{{ prod.product_image.url }}" width="300px" height="200px" alt="Product Image">
+                            <div class="fw-bold">{{prod.title}}</div>
+                            <div class="fw-bold text-danger">
+                             RS.{{prod.discounted_price}}/-
+                            <small class="fw-light text-decoration-line-through">{{prod.selling_price}}</small>
+                      </div>
+                    </a>
+                      </div>
+                      
+                  </div>
+
+               {% endfor %}
+      </div>
+     </div>
+{% endblock main-content %}

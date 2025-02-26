@@ -1,0 +1,23 @@
+# Ignore the virtual environment directory outside the root project folder
+/../venv/
+
+# Ignore the .vscode folder outside the root project folder
+/../.vscode/
+
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore SQLite database
+db.sqlite3
+*.db
+*.sqlite3
+
+# Ignore logs
+*.log
+
+# Ignore Django migrations
+*/migrations/*
+
+# Ignore IDE-specific files (if you have any)
+.idea/

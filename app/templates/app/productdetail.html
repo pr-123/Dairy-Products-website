@@ -1,0 +1,43 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block main-content %}
+<h1>Product Detail {{ pk }}</h1>
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+
+    <div style="display: flex; justify-content: space-between; width: 80%;">
+
+        <!-- Product Image -->
+        <div style="flex: 1; margin-right: 20px;">
+            <img src="{{ product.product_image.url }}" alt="Product Image" style="width: 100%; max-width: 100%; height: auto; border-radius: 8px;">
+
+        </div>
+
+        <!-- Product Details and Actions -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+            <!-- Product Details -->
+            <h2 style="font-size: 2rem; font-weight: bold; color: #333;">   {{product.title}}</h2>
+            <p style="font-size: 1rem; color: #666;">100% natural, non-homogenized, and carefully tested for being antibiotic-free and artificially administered hormone-free. Your search for pure cow milk near me ends here.</p>
+            <ul style="font-family: Rajdhani; font-size: 1.2rem; list-style: none; padding-left: 0;">
+                <li>{{ product.description }}</li>  
+            </ul>
+            <p style="font-size: 1.25rem; font-weight: bold; color: #007BFF;">$19.99</p>
+
+            <!-- Action Buttons in a Box -->
+            <div style="background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-top: 20px;">
+                <button style="width: 100%; padding: 15px; font-size: 1rem; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; margin-bottom: 10px;">
+                    Add to Cart
+                </button>
+                <button style="width: 100%; padding: 15px; font-size: 1rem; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
